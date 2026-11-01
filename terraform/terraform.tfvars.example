@@ -1,0 +1,4 @@
+# Copy to terraform.tfvars (git-ignored) and edit.
+student_name   = "Your Name"
+my_ip_cidr     = "203.0.113.25/32" # your real public IPv4 + /32
+enable_peering = false             # set to true after the baseline test

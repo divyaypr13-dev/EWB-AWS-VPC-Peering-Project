@@ -1,0 +1,10 @@
+# Private keys and secrets: never commit
+*.pem
+*.key
+# Terraform local state and plugins
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+crash.log
+.DS_Store

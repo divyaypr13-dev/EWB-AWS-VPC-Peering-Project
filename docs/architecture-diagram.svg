@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif" font-size="14">
+  <rect width="900" height="560" fill="#ffffff"/>
+  <rect x="320" y="15" width="260" height="45" rx="8" fill="#f4efe6" stroke="#999"/>
+  <text x="450" y="43" text-anchor="middle">Your laptop (SSH key + config)</text>
+  <line x1="450" y1="60" x2="450" y2="95" stroke="#0aa5ff" stroke-width="2"/>
+  <text x="460" y="82" font-size="12">SSH / 22</text>
+  <rect x="340" y="95" width="220" height="40" rx="8" fill="#f4efe6" stroke="#999"/>
+  <text x="450" y="120" text-anchor="middle">Internet gateway ewb-igw-a</text>
+  <rect x="30" y="170" width="400" height="360" rx="14" fill="#eaf5fb" stroke="#7bbbe0" stroke-width="2"/>
+  <text x="45" y="195" font-size="16" font-weight="bold">VPC A  ewb-vpc-a  10.10.0.0/16</text>
+  <rect x="55" y="215" width="350" height="110" rx="8" fill="#d8eefa" stroke="#7bbbe0"/>
+  <text x="70" y="240" font-weight="bold">Public subnet ewb-a-public 10.10.1.0/24</text>
+  <text x="70" y="265">ewb-bastion  10.10.1.10 + public IPv4</text>
+  <text x="70" y="290" font-size="12">Route table: local, 0.0.0.0/0 to IGW, 10.20.0.0/16 to pcx</text>
+  <rect x="55" y="375" width="350" height="125" rx="8" fill="#d8eefa" stroke="#7bbbe0"/>
+  <text x="70" y="400" font-weight="bold">Private subnet ewb-a-private 10.10.2.0/24</text>
+  <text x="70" y="425">ewb-app-a  10.10.2.10 (no public IP)</text>
+  <text x="70" y="450" font-size="12">Route table: local, 10.20.0.0/16 to pcx</text>
+  <line x1="230" y1="325" x2="230" y2="375" stroke="#0aa5ff" stroke-width="2"/>
+  <line x1="450" y1="135" x2="300" y2="215" stroke="#0aa5ff" stroke-width="2"/>
+  <rect x="470" y="170" width="400" height="360" rx="14" fill="#f2f8ec" stroke="#a9c97f" stroke-width="2"/>
+  <text x="485" y="195" font-size="16" font-weight="bold">VPC B  ewb-vpc-b  10.20.0.0/16</text>
+  <text x="485" y="215" font-size="12">No internet gateway</text>
+  <rect x="495" y="375" width="350" height="125" rx="8" fill="#e3f0d5" stroke="#a9c97f"/>
+  <text x="510" y="400" font-weight="bold">Private subnet ewb-b-private 10.20.1.0/24</text>
+  <text x="510" y="425">ewb-app-b  10.20.1.10 (no public IP)</text>
+  <text x="510" y="450" font-size="12">Route table: local, 10.10.0.0/16 to pcx</text>
+  <line x1="405" y1="440" x2="495" y2="440" stroke="#3a7d0a" stroke-width="4"/>
+  <rect x="415" y="420" width="70" height="40" rx="6" fill="#0b1530"/>
+  <text x="450" y="438" text-anchor="middle" fill="#fff" font-size="11">PEERING</text>
+  <text x="450" y="452" text-anchor="middle" fill="#fff" font-size="10">pcx-...</text>
+  <polyline points="405,270 650,270 650,375" fill="none" stroke="#0aa5ff" stroke-width="2"/>
+  <text x="520" y="262" font-size="12">SSH via bastion (ProxyJump)</text>
+</svg>
